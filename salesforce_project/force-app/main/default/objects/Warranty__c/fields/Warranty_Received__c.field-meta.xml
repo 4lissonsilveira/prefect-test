@@ -1,0 +1,5 @@
+<?xml version='1.0' encoding='utf-8'?>
+<CustomField xmlns:ns0="http://soap.sforce.com/2006/04/metadata" xmlns="http://soap.sforce.com/2006/04/metadata"><ns0:fullName>Warranty_Received__c</ns0:fullName>
+        <ns0:label>Warranty Received</ns0:label>
+        <ns0:type>Date</ns0:type>
+    </CustomField>

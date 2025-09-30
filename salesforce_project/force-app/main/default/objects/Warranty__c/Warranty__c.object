@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label>Warranty</label>
+    <pluralLabel>Warranties</pluralLabel>
+    <nameField>
+        <type>Text</type>
+        <label>Warranty Name</label>
+    </nameField>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <sharingModel>ReadWrite</sharingModel>
+
+    <!-- Custom Fields -->
+    <fields>
+        <fullName>Nav_ID__c</fullName>
+        <label>Nav ID</label>
+        <type>Text</type>
+        <length>80</length>
+    </fields>
+    <fields>
+        <fullName>Warranty_Received__c</fullName>
+        <label>Warranty Received</label>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>ActivationDate</fullName>
+        <label>Activation Date</label>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>BillingState</fullName>
+        <label>Billing State</label>
+        <type>Text</type>
+        <length>80</length>
+    </fields>
+    <fields>
+        <fullName>BillingStreet</fullName>
+        <label>Billing Street</label>
+        <type>Text</type>
+        <length>255</length>
+    </fields>
+    <fields>
+        <fullName>BillingCity</fullName>
+        <label>Billing City</label>
+        <type>Text</type>
+        <length>80</length>
+    </fields>
+    <fields>
+        <fullName>BillingCountry</fullName>
+        <label>Billing Country</label>
+        <type>Text</type>
+        <length>80</length>
+    </fields>
+    <fields>
+        <fullName>Cancel_Date__c</fullName>
+        <label>Cancel Date</label>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>ContractNumber</fullName>
+        <label>Contract Number</label>
+        <type>Text</type>
+        <length>80</length>
+    </fields>
+    <fields>
+        <fullName>Status</fullName>
+        <label>Status</label>
+        <type>Text</type>
+        <length>80</length>
+    </fields>
+    <fields>
+        <fullName>StartDate</fullName>
+        <label>Start Date</label>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Warranty_Group_Code__c</fullName>
+        <label>Warranty Group Code</label>
+        <type>Text</type>
+        <length>80</length>
+    </fields>
+    <fields>
+        <fullName>Warranty_Purchase_Date__c</fullName>
+        <label>Warranty Purchase Date</label>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Warranty_Status__c</fullName>
+        <label>Warranty Status</label>
+        <type>Text</type>
+        <length>80</length>
+    </fields>
+    <fields>
+        <fullName>Watchlist_Reason__c</fullName>
+        <label>Watchlist Reason</label>
+        <type>Text</type>
+        <length>255</length>
+    </fields>
+    <fields>
+        <fullName>Underwriter_Code__c</fullName>
+        <label>Underwriter Code</label>
+        <type>Text</type>
+        <length>80</length>
+    </fields>
+</CustomObject>

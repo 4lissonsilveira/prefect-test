@@ -1,0 +1,59 @@
+version: "3.9"
+
+services:
+  prefect-server:
+    image: prefecthq/prefect:3-python3.12
+    command: ["prefect", "server", "start", "--host", "0.0.0.0"]
+    ports:
+      - "4200:4200"  # API
+    environment:
+      PREFECT_API_DATABASE_CONNECTION_URL: "postgresql+asyncpg://prefect:prefect@salesforce_erp_sync-postgres-1:5432/prefect"
+    restart: unless-stopped
+    depends_on:
+      - postgres
+
+  prefect-worker:
+    image: prefect-deployer-main:latest
+    depends_on:
+      - prefect-server
+    environment:
+      PREFECT_API_URL: "http://prefect-server:4200/api"
+    command: >
+      sh -c "
+        pip install prefect && pip install docker && pip install prefect-docker &&
+        prefect work-pool create --type docker my-docker-pool --overwrite &&
+        prefect worker start --pool my-docker-pool
+      "
+    restart: unless-stopped
+    volumes:
+      - ./src/salesforce_erp_sync/erp_salesforce_sync_flows:/opt/flows
+      - /var/run/docker.sock:/var/run/docker.sock
+
+  prefect-deployer:
+    image: prefect-deployer-main:latest
+    depends_on:
+      - prefect-server
+    volumes:
+      - ./src/salesforce_erp_sync/erp_salesforce_sync_flows:/opt/flows
+      - ./src/salesforce_erp_sync/scripts:/opt/scripts
+      - /var/run/docker.sock:/var/run/docker.sock
+    environment:
+      PREFECT_API_URL: "http://prefect-server:4200/api"
+    command: ["sh", "/opt/scripts/deploy.sh"]
+    restart: "no"   # runs once and exits
+    working_dir: "/opt/flows"
+  
+  postgres:
+    image: postgres:15
+    environment:
+      POSTGRES_USER: prefect
+      POSTGRES_PASSWORD: prefect
+      POSTGRES_DB: prefect
+    ports:
+      - "5432:5432"
+    volumes:
+      - prefect-db-data:/var/lib/postgresql/data
+    restart: unless-stopped
+
+volumes:
+  prefect-db-data:

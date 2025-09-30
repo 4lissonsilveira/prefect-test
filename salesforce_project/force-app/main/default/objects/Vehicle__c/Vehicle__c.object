@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label>Vehicle</label>
+    <pluralLabel>Vehicles</pluralLabel>
+    <nameField>
+        <type>Text</type>
+        <label>Vehicle Name</label>
+    </nameField>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <sharingModel>ReadWrite</sharingModel>
+    <fields>
+        <fullName>Make__c</fullName>
+        <label>Make</label>
+        <type>Text</type>
+        <length>80</length>
+    </fields>
+    <fields>
+        <fullName>Model__c</fullName>
+        <label>Model</label>
+        <type>Text</type>
+        <length>80</length>
+    </fields>
+    <fields>
+        <fullName>Nav_ID__c</fullName>
+        <label>Nav ID</label>
+        <type>Text</type>
+        <length>80</length>
+    </fields>
+    <fields>
+        <fullName>Year__c</fullName>
+        <label>Year</label>
+        <type>Number</type>
+        <precision>4</precision>
+        <scale>0</scale>
+    </fields>
+    <fields>
+        <fullName>NewUsed__c</fullName>
+        <label>New/Used</label>
+        <type>Text</type>
+        <length>80</length>
+    </fields>
+    <fields>
+        <fullName>Odometer_at_Purchase__c</fullName>
+        <label>Odometer at Purchase</label>
+        <type>Number</type>
+        <precision>10</precision>
+        <scale>0</scale>
+    </fields>
+    <fields>
+        <fullName>Purchase_Date__c</fullName>
+        <label>Purchase Date</label>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Trim__c</fullName>
+        <label>Trim</label>
+        <type>Text</type>
+        <length>80</length>
+    </fields>
+    <fields>
+        <fullName>Vehicle_Owner__c</fullName>
+        <label>Vehicle Owner</label>
+        <type>Text</type>
+        <length>255</length>
+    </fields>
+</CustomObject>

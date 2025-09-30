@@ -1,0 +1,6 @@
+
+curl -X POST https://orgfarm-fa4f9b8218-dev-ed.develop.my.salesforce.com/services/oauth2/token -d 'grant_type=client_credentials' -d 'client_id=3MVG9rZjd7MXFdLhb._HMnhm1AWRnoV0BYmerX0NeniOwjGnCpLB5V63WpobYGesT7kU.6xZTzWo5FDqHLNs4' -d 'client_secret=86B4D3A674F80344FEDE761EEC0DD0DE6073D47736E7F0A4E179553DC172BE30'
+curl -X GET https://orgfarm-fa4f9b8218-dev-ed.develop.my.salesforce.com/services/data/v65.0/chatter/users/me -H 'Authorization: Bearer 00DgK00000BavTO!AQEAQJr.b.KpeIai7EnIBCuuB6EB.mkMHm39GHNjfHwNdL896rhb9PZJst2HuW9CpY34zdjmF2Z.YoHMHrYZDFNIeJ0ZP5xY'
+curl -X GET "https://orgfarm-fa4f9b8218-dev-ed.develop.my.salesforce.com/services/data/v65.0/query/?q=SELECT+Id%2C+Name%2C+Company%2C+Status+FROM+Lead" -H 'Authorization: Bearer 00DgK00000BavTO!AQEAQJr.b.KpeIai7EnIBCuuB6EB.mkMHm39GHNjfHwNdL896rhb9PZJst2HuW9CpY34zdjmF2Z.YoHMHrYZDFNIeJ0ZP5xY'
+
+curl -X GET "https://orgfarm-fa4f9b8218-dev-ed.develop.my.salesforce.com/services/data/v64.0/sobjects/Account/" -H 'Authorization: Bearer 00DgK00000BavTO!AQEAQGP2ez94XFw90C3M346a2XNQ5xuTkz9Nu8O3eitzP8XWenIAJ0gGP9yJIle_7VM89g_ZNLgkXeMePICAV.AATuliQ42c' 

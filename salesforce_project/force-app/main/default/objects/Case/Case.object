@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label>Case</label>
+    <pluralLabel>Cases</pluralLabel>
+    <nameField>
+        <type>AutoNumber</type>
+        <label>Case Number</label>
+    </nameField>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <sharingModel>ReadWrite</sharingModel>
+
+    <!-- Custom Fields -->
+    <fields>
+        <fullName>Resolution__c</fullName>
+        <label>Resolution</label>
+        <type>Text</type>
+        <length>255</length>
+    </fields>
+    <fields>
+        <fullName>Actual_Invoice_Amount__c</fullName>
+        <label>Actual Invoice Amount</label>
+        <type>Currency</type>
+        <precision>18</precision>
+        <scale>2</scale>
+    </fields>
+    <fields>
+        <fullName>Claim_Date__c</fullName>
+        <label>Claim Date</label>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Claim_Determination__c</fullName>
+        <label>Claim Determination</label>
+        <type>Text</type>
+        <length>255</length>
+    </fields>
+    <fields>
+        <fullName>Claim_Number__c</fullName>
+        <label>Claim Number</label>
+        <type>Text</type>
+        <length>80</length>
+    </fields>
+    <fields>
+        <fullName>Date_of_Loss__c</fullName>
+        <label>Date of Loss</label>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Inspection_Received_Date__c</fullName>
+        <label>Inspection Received Date</label>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Posting_Date__c</fullName>
+        <label>Posting Date</label>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Product__c</fullName>
+        <label>Product</label>
+        <type>Lookup</type>
+        <referenceTo>Product2</referenceTo>
+    </fields>
+    <fields>
+        <fullName>Ready_to_Post__c</fullName>
+        <label>Ready to Post</label>
+        <type>Checkbox</type>
+        <defaultValue>false</defaultValue>
+    </fields>
+    <fields>
+        <fullName>Unregistered__c</fullName>
+        <label>Unregistered</label>
+        <type>Checkbox</type>
+        <defaultValue>false</defaultValue>
+    </fields>
+    <fields>
+        <fullName>Warranty_Line_Item__c</fullName>
+        <label>Warranty Line Item</label>
+        <type>Text</type>
+        <length>255</length>
+    </fields>
+    <fields>
+        <fullName>Approved_Amount__c</fullName>
+        <label>Approved Amount</label>
+        <type>Currency</type>
+        <precision>18</precision>
+        <scale>2</scale>
+    </fields>
+    <fields>
+        <fullName>Claim_Date_Created_Date_Diff__c</fullName>
+        <label>Claim Date Created Date Diff</label>
+        <type>Number</type>
+        <precision>5</precision>
+        <scale>0</scale>
+    </fields>
+    <fields>
+        <fullName>Claim_Line__c</fullName>
+        <label>Claim Line</label>
+        <type>Text</type>
+        <length>255</length>
+    </fields>
+    <fields>
+        <fullName>Claim_Header__c</fullName>
+        <label>Claim Header</label>
+        <type>Text</type>
+        <length>255</length>
+    </fields>
+    <fields>
+        <fullName>Color__c</fullName>
+        <label>Color</label>
+        <type>Text</type>
+        <length>80</length>
+    </fields>
+    <fields>
+        <fullName>Days_from_Purchase_to_Claim__c</fullName>
+        <label>Days from Purchase to Claim</label>
+        <type>Number</type>
+        <precision>5</precision>
+        <scale>0</scale>
+    </fields>
+    <fields>
+        <fullName>Days_from_loss_to_claim__c</fullName>
+        <label>Days from Loss to Claim</label>
+        <type>Number</type>
+        <precision>5</precision>
+        <scale>0</scale>
+    </fields>
+    <fields>
+        <fullName>Days_to_Determine__c</fullName>
+        <label>Days to Determine</label>
+        <type>Number</type>
+        <precision>5</precision>
+        <scale>0</scale>
+    </fields>
+    <fields>
+        <fullName>Dealer_Amount__c</fullName>
+        <label>Dealer Amount</label>
+        <type>Currency</type>
+        <precision>18</precision>
+        <scale>2</scale>
+    </fields>
+    <fields>
+        <fullName>Denial_Reason__c</fullName>
+        <label>Denial Reason</label>
+        <type>Text</type>
+        <length>255</length>
+    </fields>
+    <fields>
+        <fullName>Denial_Reason_Text__c</fullName>
+        <label>Denial Reason Text</label>
+        <type>Text</type>
+        <length>255</length>
+    </fields>
+    <fields>
+        <fullName>Estimated_Cost__c</fullName>
+        <label>Estimated Cost</label>
+        <type>Currency</type>
+        <precision>18</precision>
+        <scale>2</scale>
+    </fields>
+    <fields>
+        <fullName>Invoice_Total__c</fullName>
+        <label>Invoice Total</label>
+        <type>Currency</type>
+        <precision>18</precision>
+        <scale>2</scale>
+    </fields>
+    <fields>
+        <fullName>Nav_Claim_Header_ID__c</fullName>
+        <label>Nav Claim Header ID</label>
+        <type>Text</type>
+        <length>80</length>
+    </fields>
+    <fields>
+        <fullName>Permaplate_Amount__c</fullName>
+        <label>Permaplate Amount</label>
+        <type>Currency</type>
+        <precision>18</precision>
+        <scale>2</scale>
+    </fields>
+    <fields>
+        <fullName>Product_Group__c</fullName>
+        <label>Product Group</label>
+        <type>Text</type>
+        <length>80</length>
+    </fields>
+    <fields>
+        <fullName>Purchase_Date__c</fullName>
+        <label>Purchase Date</label>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Retailer_Amount__c</fullName>
+        <label>Retailer Amount</label>
+        <type>Currency</type>
+        <precision>18</precision>
+        <scale>2</scale>
+    </fields>
+    <fields>
+        <fullName>Retailer_Group__c</fullName>
+        <label>Retailer Group</label>
+        <type>Text</type>
+        <length>80</length>
+    </fields>
+    <fields>
+        <fullName>Warranty_Status__c</fullName>
+        <label>Warranty Status</label>
+        <type>Text</type>
+        <length>80</length>
+    </fields>
+    <fields>
+        <fullName>Warranty_Group_Code__c</fullName>
+        <label>Warranty Group Code</label>
+        <type>Text</type>
+        <length>80</length>
+    </fields>
+</CustomObject>
