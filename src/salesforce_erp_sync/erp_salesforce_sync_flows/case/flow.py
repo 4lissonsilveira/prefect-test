@@ -1,7 +1,7 @@
 from prefect import flow
-from simple_salesforce import Salesforce  # Importing Salesforce explicitly for type hinting
 from clients.salesforce import create_salesforce_client
-
+from prefect.logging import get_run_logger
+import requests
 
 
 @flow(log_prints=True) # type: ignore
@@ -12,8 +12,12 @@ def flow_sync_case_object() -> None:
         "86B4D3A674F80344FEDE761EEC0DD0DE6073D47736E7F0A4E179553DC172BE30" # client secret
     )
 
+    logger = get_run_logger()
+
     cases = client.get_claims()
     rows_to_update: dict[str, dict[str, str]] = {}
+
+    print("cases: ", cases)
 
     for case in cases:
         for field in ["Id", "CaseNumber", "Status"]:
