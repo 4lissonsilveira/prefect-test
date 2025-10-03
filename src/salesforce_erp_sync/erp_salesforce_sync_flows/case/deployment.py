@@ -1,6 +1,5 @@
 from flow import flow_sync_case_object
 
-
 # TODO: create an image of docker just to be used just for de deployments
 # and create another one that will be used buy the prefect-deployer container.
 if __name__ == "__main__":

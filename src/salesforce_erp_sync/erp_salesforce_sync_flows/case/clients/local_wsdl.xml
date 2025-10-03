@@ -1,0 +1,213 @@
+<definitions targetNamespace="urn:microsoft-dynamics-schemas/codeunit/WSMgmt"
+    xmlns="http://schemas.xmlsoap.org/wsdl/"
+    xmlns:tns="urn:microsoft-dynamics-schemas/codeunit/WSMgmt">
+    <types>
+        <schema elementFormDefault="qualified"
+            targetNamespace="urn:microsoft-dynamics-nav/xmlports/x50018"
+            xmlns="http://www.w3.org/2001/XMLSchema"
+            xmlns:tns="urn:microsoft-dynamics-nav/xmlports/x50018">
+            <complexType name="ClaimLine">
+                <sequence>
+                    <element minOccurs="1" maxOccurs="1" default="0" name="LineNo" type="int" />
+                    <element minOccurs="1" maxOccurs="1" name="ProductType" type="string" />
+                    <element minOccurs="0" maxOccurs="1" name="ClaimDate" type="string" />
+                    <element minOccurs="0" maxOccurs="1" name="DateOfLoss" type="string" />
+                    <element minOccurs="0" maxOccurs="1" name="DatePaid" type="string" />
+                    <element minOccurs="0" maxOccurs="1" name="RepairFacility" type="string" />
+                    <element minOccurs="0" maxOccurs="1" name="RepairCompletionDate" type="string" />
+                    <element minOccurs="0" maxOccurs="1" name="Replaced" type="string" />
+                    <element minOccurs="0" maxOccurs="1" name="ClaimDescription" type="string" />
+                    <element minOccurs="0" maxOccurs="1" name="CompanyNoOfInsured" type="string" />
+                    <element minOccurs="0" maxOccurs="1" name="ClaimDetermination" type="string" />
+                    <element minOccurs="0" maxOccurs="1" name="InspectionReceivedDate" type="string" />
+                    <element minOccurs="0" maxOccurs="1" name="ClaimStatus" type="string" />
+                    <element minOccurs="0" maxOccurs="1" name="LineSalesForceID" type="string" />
+                </sequence>
+            </complexType>
+            <complexType name="ClaimHeader">
+                <sequence>
+                    <element minOccurs="0" maxOccurs="1" name="No" type="string" />
+                    <element minOccurs="0" maxOccurs="1" name="WarrantyNo" type="string" />
+                    <element minOccurs="0" maxOccurs="1" default="0" name="WarrantyEntryNo"
+                        type="int" />
+                    <element minOccurs="0" maxOccurs="1" name="WarrantyRecDate" type="string" />
+                    <element minOccurs="0" maxOccurs="1" name="PurchaseDate" type="string" />
+                    <element minOccurs="0" maxOccurs="1" name="VIN" type="string" />
+                    <element minOccurs="0" maxOccurs="1" name="Make" type="string" />
+                    <element minOccurs="0" maxOccurs="1" name="Model" type="string" />
+                    <element minOccurs="0" maxOccurs="1" default="0" name="ModelYear" type="int" />
+                    <element minOccurs="0" maxOccurs="1" default="0" name="VehicleOwnerNo"
+                        type="int" />
+                    <element minOccurs="0" maxOccurs="1" name="DealerNo" type="string" />
+                    <element minOccurs="0" maxOccurs="1" name="DocumentStorage" type="string" />
+                    <element minOccurs="0" maxOccurs="1" name="ClaimStatus" type="string" />
+                    <element minOccurs="0" maxOccurs="1" name="DateClaimReported" type="string" />
+                    <element minOccurs="0" maxOccurs="1" name="TotalClaimCost" type="string" />
+                    <element minOccurs="0" maxOccurs="1" name="CustomerFirstName" type="string" />
+                    <element minOccurs="0" maxOccurs="1" name="CustomerLastName" type="string" />
+                    <element minOccurs="0" maxOccurs="1" name="CustomerAddress" type="string" />
+                    <element minOccurs="0" maxOccurs="1" name="CustomerCity" type="string" />
+                    <element minOccurs="0" maxOccurs="1" name="CustomerState" type="string" />
+                    <element minOccurs="0" maxOccurs="1" name="CustomerZip" type="string" />
+                    <element minOccurs="0" maxOccurs="1" name="CustomerCountry" type="string" />
+                    <element minOccurs="0" maxOccurs="1" name="MessageStatus" type="string" />
+                    <element minOccurs="0" maxOccurs="1" name="HdrSalesForceID" type="string" />
+                    <element minOccurs="0" maxOccurs="unbounded" name="ClaimLine"
+                        type="tns:ClaimLine" />
+                </sequence>
+            </complexType>
+            <complexType name="ClaimData" mixed="true">
+                <sequence>
+                    <element minOccurs="1" maxOccurs="unbounded" name="ClaimHeader"
+                        type="tns:ClaimHeader" />
+                </sequence>
+            </complexType>
+            <element name="ClaimData" type="tns:ClaimData" />
+        </schema>
+        <schema elementFormDefault="qualified"
+            targetNamespace="urn:microsoft-dynamics-nav/xmlports/x50021"
+            xmlns="http://www.w3.org/2001/XMLSchema"
+            xmlns:tns="urn:microsoft-dynamics-nav/xmlports/x50021">
+            <complexType name="SalesHeader" mixed="true">
+                <sequence>
+                    <element minOccurs="0" maxOccurs="1" name="DLRCODE" type="string" />
+                    <element minOccurs="0" maxOccurs="1" name="ROPO" type="string" />
+                    <element minOccurs="0" maxOccurs="1" name="InvoiceNo" type="string" />
+                    <element minOccurs="1" maxOccurs="1" name="PaymentNo" type="string" />
+                </sequence>
+            </complexType>
+            <complexType name="SalesLine" mixed="true">
+                <sequence>
+                    <element minOccurs="0" maxOccurs="1" name="Resource" type="string" />
+                    <element minOccurs="0" maxOccurs="1" name="No." type="string" />
+                    <element minOccurs="0" maxOccurs="1" name="Description" type="string" />
+                    <element minOccurs="0" maxOccurs="1" name="Qty" type="string" />
+                    <element minOccurs="0" maxOccurs="1" name="Uom" type="string" />
+                    <element minOccurs="0" maxOccurs="1" name="UnitPrice" type="string" />
+                    <element minOccurs="0" maxOccurs="1" name="TaxGroup" type="string" />
+                    <element minOccurs="0" maxOccurs="1" name="LineAmount" type="string" />
+                    <element minOccurs="0" maxOccurs="1" name="ROPO" type="string" />
+                    <element minOccurs="0" maxOccurs="1" name="VIN" type="string" />
+                    <element minOccurs="0" maxOccurs="1" name="OrderDate" type="string" />
+                    <element minOccurs="0" maxOccurs="1" name="WarrantyNo" type="string" />
+                    <element minOccurs="0" maxOccurs="1" name="InboundWarranty" type="string" />
+                    <element minOccurs="0" maxOccurs="1" default="0" name="TermCode" type="int" />
+                    <element minOccurs="0" maxOccurs="1" name="LevelCode" type="string" />
+                    <element minOccurs="0" maxOccurs="1" name="DiscountCode" type="string" />
+                    <element minOccurs="0" maxOccurs="1" name="ClaimIncentiveCode" type="string" />
+                    <element minOccurs="0" maxOccurs="1" default="0" name="Year" type="int" />
+                    <element minOccurs="0" maxOccurs="1" name="Make" type="string" />
+                    <element minOccurs="0" maxOccurs="1" name="Model" type="string" />
+                    <element minOccurs="0" maxOccurs="1" name="Filename" type="string" />
+                </sequence>
+            </complexType>
+            <complexType name="FilmLoader">
+                <sequence>
+                    <element minOccurs="1" maxOccurs="unbounded" name="SalesHeader"
+                        type="tns:SalesHeader" />
+                    <element minOccurs="1" maxOccurs="unbounded" name="SalesLine"
+                        type="tns:SalesLine" />
+                </sequence>
+            </complexType>
+            <complexType name="FilmLoaderData" mixed="true">
+                <sequence>
+                    <element minOccurs="1" maxOccurs="unbounded" name="FilmLoader"
+                        type="tns:FilmLoader" />
+                </sequence>
+            </complexType>
+            <element name="FilmLoaderData" type="tns:FilmLoaderData" />
+        </schema>
+        <schema elementFormDefault="qualified"
+            targetNamespace="urn:microsoft-dynamics-schemas/codeunit/WSMgmt"
+            xmlns="http://www.w3.org/2001/XMLSchema">
+            <element name="InsertUpdateClaim">
+                <complexType>
+                    <sequence>
+                        <element minOccurs="1" maxOccurs="1" name="wSClaim" type="q1:ClaimData"
+                            xmlns:q1="urn:microsoft-dynamics-nav/xmlports/x50018" />
+                    </sequence>
+                </complexType>
+            </element>
+            <element name="InsertUpdateClaim_Result">
+                <complexType>
+                    <sequence>
+                        <element minOccurs="1" maxOccurs="1" name="wSClaim" type="q2:ClaimData"
+                            xmlns:q2="urn:microsoft-dynamics-nav/xmlports/x50018" />
+                    </sequence>
+                </complexType>
+            </element>
+            <element name="InsertUpdateFilmLoaderData">
+                <complexType>
+                    <sequence>
+                        <element minOccurs="1" maxOccurs="1" name="wSFilmLoader"
+                            type="q3:FilmLoaderData"
+                            xmlns:q3="urn:microsoft-dynamics-nav/xmlports/x50021" />
+                    </sequence>
+                </complexType>
+            </element>
+            <element name="InsertUpdateFilmLoaderData_Result">
+                <complexType>
+                    <sequence>
+                        <element minOccurs="1" maxOccurs="1" name="wSFilmLoader"
+                            type="q4:FilmLoaderData"
+                            xmlns:q4="urn:microsoft-dynamics-nav/xmlports/x50021" />
+                    </sequence>
+                </complexType>
+            </element>
+        </schema>
+    </types>
+    <message name="InsertUpdateClaim">
+        <part name="parameters" element="tns:InsertUpdateClaim" />
+    </message>
+    <message name="InsertUpdateClaim_Result">
+        <part name="parameters" element="tns:InsertUpdateClaim_Result" />
+    </message>
+    <message name="InsertUpdateFilmLoaderData">
+        <part name="parameters" element="tns:InsertUpdateFilmLoaderData" />
+    </message>
+    <message name="InsertUpdateFilmLoaderData_Result">
+        <part name="parameters" element="tns:InsertUpdateFilmLoaderData_Result" />
+    </message>
+    <portType name="WSMgmt_Port">
+        <operation name="InsertUpdateClaim">
+            <input name="InsertUpdateClaim" message="tns:InsertUpdateClaim" />
+            <output name="InsertUpdateClaim_Result" message="tns:InsertUpdateClaim_Result" />
+        </operation>
+        <operation name="InsertUpdateFilmLoaderData">
+            <input name="InsertUpdateFilmLoaderData" message="tns:InsertUpdateFilmLoaderData" />
+            <output name="InsertUpdateFilmLoaderData_Result"
+                message="tns:InsertUpdateFilmLoaderData_Result" />
+        </operation>
+    </portType>
+    <binding name="WSMgmt_Binding" type="tns:WSMgmt_Port">
+        <binding transport="http://schemas.xmlsoap.org/soap/http"
+            xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+        <operation name="InsertUpdateClaim">
+            <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/WSMgmt:InsertUpdateClaim"
+                style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+            <input name="InsertUpdateClaim">
+                <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+            </input>
+            <output name="InsertUpdateClaim_Result">
+                <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+            </output>
+        </operation>
+        <operation name="InsertUpdateFilmLoaderData">
+            <operation
+                soapAction="urn:microsoft-dynamics-schemas/codeunit/WSMgmt:InsertUpdateFilmLoaderData"
+                style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+            <input name="InsertUpdateFilmLoaderData">
+                <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+            </input>
+            <output name="InsertUpdateFilmLoaderData_Result">
+                <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+            </output>
+        </operation>
+    </binding>
+    <service name="WSMgmt">
+        <port name="WSMgmt_Port" binding="tns:WSMgmt_Binding">
+            <address location="https://b6589f70effc.ngrok-free.app"
+                xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+        </port>
+    </service>
+</definitions>

@@ -48,7 +48,6 @@ class SalesforceClient:
                 Resolution__c,
                 Status,
                 Unregistered__c,
-                Warranty_Line_Item__c,
                 Approved_Amount__c,
                 Claim_Date_Created_Date_Diff__c,
                 Claim_Line__c,
@@ -72,8 +71,6 @@ class SalesforceClient:
                 Retailer_Amount__c,
                 Retailer_Group__c,
                 Type,
-                Warranty_Status__c,
-                Warranty_Group_Code__c,
                 Vehicle__r.Make__c,
                 Vehicle__r.Model__c,
                 Vehicle__r.Name,
@@ -95,7 +92,8 @@ class SalesforceClient:
                 Contact.Email,
                 Contact.MobilePhone,
                 Contact.Name,
-                Contact.Phone
+                Contact.Phone,
+                Warranty__r.Nav_ID__c,
             FROM Case
             WHERE Nav_Id__c = null
               AND (
