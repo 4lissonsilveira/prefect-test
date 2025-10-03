@@ -6,11 +6,10 @@ from .clients.navision import create_navision_client
 from .transformers.claim import from_salesforce_to_navision
 
 
-logger = get_run_logger() # type: ignore
-
 
 @flow(log_prints=True) # type: ignore
 def flow_sync_case_object() -> None:
+    logger = get_run_logger() # type: ignore
     sf_client = create_salesforce_client(
         "orgfarm-fa4f9b8218-dev-ed.develop.my",  # domain or instance url
         "3MVG9rZjd7MXFdLhb._HMnhm1AWRnoV0BYmerX0NeniOwjGnCpLB5V63WpobYGesT7kU.6xZTzWo5FDqHLNs4", # client id
