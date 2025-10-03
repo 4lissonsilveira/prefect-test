@@ -24,7 +24,7 @@ def flow_sync_case_object() -> None:
         nv_client.insert_update_claim(sf_case)
 
         rows_to_update[case["Id"]] = {
-            "Nav_Id__c": sf_case["ClaimHeader"]["No"] + sf_case["ClaimLine"][0]["LineNo"]
+            "Nav_Id__c": str(sf_case["ClaimHeader"]["No"]) + str(sf_case["ClaimLine"][0]["LineNo"])
         }
 
         logger.info(f"Claim {sf_case['ClaimHeader']['No']} upserted")

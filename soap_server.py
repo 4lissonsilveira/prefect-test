@@ -7,7 +7,7 @@ from lxml import etree
 app = FastAPI(debug=True)
 
 # Load the WSDL file
-WSDL_PATH = "src/salesforce_erp_sync/erp_salesforce_sync_flows/case/clients/navision_wsdl.xml"  # Replace with the path to your WSDL file
+WSDL_PATH = "src/salesforce_erp_sync/erp_salesforce_sync_flows/case/clients/local_wsdl.xml"  # Replace with the path to your WSDL file
 client = Client(WSDL_PATH)
 
 # Serve the WSDL file
