@@ -7,8 +7,8 @@ def  from_salesforce_to_navision(claim: dict[str, Any]) -> dict[str, Any]:
         "ClaimHeader": {
             "No": claim["CaseNumber"],
             "WarrantyEntryNo": (
-                int(claim["Warranty__R"]["Nav_ID__c"])
-                if claim["Warranty__R"]["Nav_ID__c"]
+                int(claim["Warranty__r"]["Nav_ID__c"])
+                if claim["Warranty__r"]["Nav_ID__c"]
                 else 0
             ),
             "VIN": claim["Vehicle__r"]["Nav_ID__c"],
@@ -20,7 +20,7 @@ def  from_salesforce_to_navision(claim: dict[str, Any]) -> dict[str, Any]:
             "DocumentStorage": None,
             "ClaimStatus": (
                 "Unregistered"
-                if not claim["Warranty__R"]["Nav_ID__c"] and claim["Unregistered__c"]
+                if not claim["Warranty__r"]["Nav_ID__c"] and claim["Unregistered__c"]
                 else claim["Status"]
             ),
             "DateClaimReported": claim["Claim_Date__c"],
@@ -50,7 +50,7 @@ def  from_salesforce_to_navision(claim: dict[str, Any]) -> dict[str, Any]:
                 "ClaimDetermination": claim["Claim_Determination__c"],
                 "ClaimStatus": fix_claim_status(
                     "List 1"
-                    if "safelite" in claim["Technician_Account__R"]["Name"].lower()
+                    if "safelite" in claim["Technician_Account__r"]["Name"].lower()
                     else (
                         "Processed"
                         if claim["Status"] == "Payables Approval"
