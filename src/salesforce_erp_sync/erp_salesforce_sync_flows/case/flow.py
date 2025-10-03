@@ -8,7 +8,7 @@ from .transformers.claim import from_salesforce_to_navision
 
 
 @flow(log_prints=True) # type: ignore
-def flow_sync_case_object(salesforce_case_number: str = "") -> None:
+def flow_sync_case_object(salesforce_case_number) -> None:
     logger = get_run_logger() # type: ignore
     sf_client = create_salesforce_client(
         "orgfarm-fa4f9b8218-dev-ed.develop.my",  # domain or instance url
