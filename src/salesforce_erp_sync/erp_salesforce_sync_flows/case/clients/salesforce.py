@@ -93,7 +93,7 @@ class SalesforceClient:
                 Contact.MobilePhone,
                 Contact.Name,
                 Contact.Phone,
-                Warranty__r.Nav_ID__c,
+                Warranty__r.Nav_ID__c
             FROM Case
             WHERE Nav_Id__c = null
               AND (
