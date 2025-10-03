@@ -2,7 +2,6 @@ from typing import Any
 
 # TODO: not all fields are mandatory, check which ones could be null
 def  from_salesforce_to_navision(claim: dict[str, Any]) -> dict[str, Any]:
-    print(claim)
     return {
         "ClaimHeader": {
             "No": claim["CaseNumber"],
