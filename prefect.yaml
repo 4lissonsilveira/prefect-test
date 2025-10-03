@@ -28,7 +28,8 @@ deployments:
   schedule: {}
   flow_name: get-data-from-sf
   entrypoint: src/salesforce_erp_sync/erp_salesforce_sync_flows/case/flow.py:flow_sync_case_object
-  parameters: {}
+  parameters: 
+     salesforce_case_number: Null
   work_pool:
     name: null
     work_queue_name: null
