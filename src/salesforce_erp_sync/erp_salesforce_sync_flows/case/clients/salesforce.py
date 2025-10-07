@@ -24,7 +24,7 @@ class SalesforceClient:
 
     # TODO: - Warranty object doesnt exist as standard
     #       - This version of SF doesnt have middlename as a field in contact 
-    def get_claims(self, limit: int = 50):
+    def get_claims(self, limit: int = 50) -> list[dict[str, Any]]:
         if not isinstance(limit, int): #type: ignore
             raise ValueError("Limit must be an integer")
 
@@ -112,7 +112,7 @@ class SalesforceClient:
 
     # TODO: - Warranty object doesnt exist as standard
     #       - This version of SF doesnt have middlename as a field in contact 
-    def get_claim_by_case_number(self, case_number: str):
+    def get_claim_by_case_number(self, case_number: str) -> dict[str, Any]:
         query = f"""
             SELECT
                 Technician_Account__r.Name,
@@ -184,7 +184,7 @@ class SalesforceClient:
             FROM Case
             WHERE CaseNumber = '{case_number}'
         """
-        return self.execute_query(query)
+        return self.execute_query(query)[0]
 
     def update_claims(self, rows: dict[str, dict[str, str]]):
         [
