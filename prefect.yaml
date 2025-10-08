@@ -26,11 +26,9 @@ deployments:
   tags: []
   description: null
   schedule: {}
-  flow_name: get-data-from-sf
+  flow_name: flow_sync_case_object
   entrypoint: src/salesforce_erp_sync/erp_salesforce_sync_flows/case/flow.py:flow_sync_case_object
   work_pool:
-    name: null
-    work_queue_name: null
     job_variables: 
       env:
         EXTRA_PIP_PACKAGES: simple_salesforce,zeep
