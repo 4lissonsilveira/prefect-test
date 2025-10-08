@@ -206,7 +206,7 @@
     </binding>
     <service name="WSMgmt">
         <port name="WSMgmt_Port" binding="tns:WSMgmt_Binding">
-            <address location="https://b6589f70effc.ngrok-free.app"
+            <address location="https://8658bb89471d.ngrok-free.app/wsdl"
                 xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
         </port>
     </service>
