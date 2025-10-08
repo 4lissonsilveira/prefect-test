@@ -11,7 +11,8 @@ if __name__ == "__main__":
         job_variables={
             "env":{
                 "PREFECT_API_URL": "http://localhost:4200/api",
-                "EXTRA_PIP_PACKAGES": "simple_salesforce"
+                "EXTRA_PIP_PACKAGES": "simple_salesforce",
+                "PYTHONPATH": "/opt/prefect/flows"
             }
         }
     )
